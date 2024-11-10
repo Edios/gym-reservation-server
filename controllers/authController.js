@@ -27,7 +27,10 @@ exports.register=async(req,res)=>{
             },
             process.env.JWT_SECRET,
             {expiresIn:'1h'});
-            res.json({token})
+            res.json({
+                token,
+                userId: user._id
+            })
         }
         catch(error){
             console.error(error);
@@ -61,7 +64,10 @@ exports.login=async(req,res)=>{
             },
             process.env.JWT_SECRET,
             {expiresIn:'1h'});
-        res.json({token})
+        res.json({
+            token,
+            userId: user._id
+        })
     }
     catch(error){
         console.error(error);
