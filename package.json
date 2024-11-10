@@ -1,5 +1,5 @@
 {
-  "name": "gym-reservation-system",
+  "name": "gym-reservation-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
