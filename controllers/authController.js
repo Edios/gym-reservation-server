@@ -29,12 +29,12 @@ exports.register=async(req,res)=>{
             {expiresIn:'1h'});
             res.json({
                 token,
-                userId: user._id
+                userId: newUser._id
             })
         }
         catch(error){
             console.error(error);
-            res.status(500).json({message:"Server error"});
+            res.status(500).json({message:"Server error",error});
     }
 };
 
